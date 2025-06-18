@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import data from '../assets/image_data.json';
 import pinIcon from '../assets/location-pin.png';
+import mainImage from '../assets/main-image.jpg';
 import brideAccountData from '../assets/bride_account_number_data.json';
 import groomAccountData from '../assets/groom_account_number_data.json';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -71,7 +72,7 @@ const Bride: React.FC = () => {
           <div className="col-md">
             <div className='mainsection'>
               <div>
-                <img src="https://dave-khim-aws-bucket-public.s3.ap-northeast-2.amazonaws.com/test/love-tenderness-couple-s-crossed-hands.jpg" className='main-image' alt='t1'></img>
+                <img src={mainImage} className='main-image' alt='t1'></img>
               </div>
               <div className='mainsection-text'>
                 <div className='mainsection-text-1'>결혼식에 초대합니다</div>
@@ -146,9 +147,9 @@ const Bride: React.FC = () => {
             <div className='location-info-section'>
                 <div className='location-info-section-text1'>수원 노보텔</div>
                 <div className='location-info-section-text2'>
-                    서울특별시 관악구 관악로 1<br/>
-                    서울대학교 310동 엔지니어하우스<br/>
-                    Tel. 02-875-7761
+                    경기 수원시 팔달구 덕영대로 90<br/>
+                    2층 메인 홀<br/>
+                    Tel. 031-547-6600
                 </div>
             </div>
             <div className='location-how-publictrans-section'>
