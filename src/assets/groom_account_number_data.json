@@ -3,8 +3,14 @@
         {
             "title" : "신랑 계좌",
             "bank_name" : "신한은행",
-            "account_owner" : "김신랑",
-            "account_number" : "111-222-333333"
+            "account_owner" : "최연준",
+            "account_number" : "110-511-111577"
+        },
+        {
+            "title" : "혼주 계좌",
+            "bank_name" : "신한은행",
+            "account_owner" : "최진태",
+            "account_number" : "110-511-111577"
         }
     ]
 }
