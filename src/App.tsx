@@ -1,15 +1,12 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Groom from "./pages/Groom";
-import Bride from "./pages/Bride";
+import MainPage from "./pages/MainPage";
 
 const App: React.FC = () => {
   return (
     <div>
       <Routes>
-        <Route path="/groom" element={<Groom/>}/>
-        <Route path="/bride" element={<Bride/>}/>
-        <Route path="*" element={<Bride/>}/>
+        <Route path="*" element={<MainPage/>}/>
       </Routes>
     </div>
   );
