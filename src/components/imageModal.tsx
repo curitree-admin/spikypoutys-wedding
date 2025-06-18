@@ -1,9 +1,16 @@
 import { ReactComponent as LeftArrow } from '../assets/arrow-left.svg';
 import { ReactComponent as RightArrow } from '../assets/arrow-right.svg';
 
-const imageModal = ({clickedImg, handleRotationRight, handleRotationLeft, setClickedImg}) => {
+interface ImageModalProps {
+    clickedImg: string;
+    handleRotationRight: () => void;
+    handleRotationLeft: () => void;
+    setClickedImg: React.Dispatch<React.SetStateAction<string | null>>;
+}
 
-    const handleClick = (e) => {
+const ImageModal: React.FC<ImageModalProps> = ({clickedImg, handleRotationRight, handleRotationLeft, setClickedImg}) => {
+
+    const handleClick = (e: React.MouseEvent<HTMLDivElement | HTMLSpanElement>) => {
         if (e.target.classList.contains("dismiss")) {
             setClickedImg(null);
         }
@@ -29,4 +36,4 @@ const imageModal = ({clickedImg, handleRotationRight, handleRotationLeft, setCli
     </>;
 };
 
-export default imageModal;
+export default ImageModal;

@@ -6,14 +6,14 @@ import { Container as MapDiv, NaverMap, Marker, useNavermaps} from 'react-naver-
 import '../App.css';
 import ImageModal from '../components/imageModal';
 
-function Groom() {
+const Groom: React.FC = () => {
   // state for image modal
-  const [clickedImg, setClickedImg] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(null);
+  const [clickedImg, setClickedImg] = useState<string | null>(null);
+  const [currentIndex, setCurrentIndex] = useState<number | null>(null);
 
   const navermaps = useNavermaps()
 
-  const handleClick = (item, index) => {
+  const handleClick = (item: { link: string }, index: number) => {
     setCurrentIndex(index);
     setClickedImg(item.link);
   };
