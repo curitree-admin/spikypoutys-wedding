@@ -8,7 +8,13 @@ function getConnectionSpeed() {
     : '';
 }
 
-export function sendToVercelAnalytics(metric) {
+export interface Metric {
+  id: string;
+  name: string;
+  value: number;
+}
+
+export function sendToVercelAnalytics(metric: Metric) {
   const analyticsId = process.env.REACT_APP_VERCEL_ANALYTICS_ID;
   if (!analyticsId) {
     return;
@@ -38,3 +44,4 @@ export function sendToVercelAnalytics(metric) {
       keepalive: true,
     });
 }
+

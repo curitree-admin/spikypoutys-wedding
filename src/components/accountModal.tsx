@@ -1,20 +1,26 @@
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 
-const accountModal = ({clickedAccountData, setClickedAccountData, copiedAccount, setCopiedAccount}) => {
+interface AccountModalProps {
+  clickedAccountData: any[];
+  setClickedAccountData: React.Dispatch<React.SetStateAction<any[] | null>>;
+  copiedAccount: string | null;
+  setCopiedAccount: React.Dispatch<React.SetStateAction<string | null>>;
+}
 
-    const delay = ms => new Promise(
-    resolve => setTimeout(resolve, ms)
-    );
+const AccountModal: React.FC<AccountModalProps> = ({clickedAccountData, setClickedAccountData, copiedAccount, setCopiedAccount}) => {
 
-    const accountClick = (e) => {
+    const delay = (ms: number) =>
+        new Promise(resolve => setTimeout(resolve, ms));
+
+    const accountClick = (e: React.MouseEvent<HTMLDivElement>) => {
         if (e.target.classList.contains("dismiss")) {
             setClickedAccountData(null);
             setCopiedAccount(null);
         }
     };
 
-    const copyAccountNumber = async (account_number) => {
+    const copyAccountNumber = async (account_number: string) => {
         // navigator.clipboard.writeText(account_number);
         setCopiedAccount(account_number);
         await delay(3000);
@@ -58,4 +64,4 @@ const accountModal = ({clickedAccountData, setClickedAccountData, copiedAccount,
 
 }
 
-export default accountModal;
+export default AccountModal;

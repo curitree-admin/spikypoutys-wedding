@@ -9,21 +9,21 @@ import '../App.css';
 import ImageModal from '../components/imageModal';
 import AccountModal from '../components/accountModal';
 
-function Bride() {
+const Bride: React.FC = () => {
   // state for image modal
-  const [clickedImg, setClickedImg] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(null);
+  const [clickedImg, setClickedImg] = useState<string | null>(null);
+  const [currentIndex, setCurrentIndex] = useState<number | null>(null);
   // state for account modal
-  const [ clickedAccountData, setClickedAccountData ] = useState(null);
-  const [ copiedAccount, setCopiedAccount ] = useState(null);
+  const [ clickedAccountData, setClickedAccountData ] = useState<any>(null);
+  const [ copiedAccount, setCopiedAccount ] = useState<string | null>(null);
 
   const navermaps = useNavermaps()
 
-  const handleClick = (item, index) => {
+  const handleClick = (item: { link: string }, index: number) => {
     setCurrentIndex(index);
     setClickedImg(item.link);
   };
-  const accountClick = (account_data) => {
+  const accountClick = (account_data: { data: any }) => {
     setClickedAccountData(account_data.data);
   };
 

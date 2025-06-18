@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Groom from "./pages/Groom";
 import Bride from "./pages/Bride";
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <div>
       <Routes>
