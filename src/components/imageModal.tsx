@@ -11,7 +11,8 @@ interface ImageModalProps {
 const ImageModal: React.FC<ImageModalProps> = ({clickedImg, handleRotationRight, handleRotationLeft, setClickedImg}) => {
 
     const handleClick = (e: React.MouseEvent<HTMLDivElement | HTMLSpanElement>) => {
-        if (e.target.classList.contains("dismiss")) {
+        const target = e.target as HTMLElement;
+        if (target.classList.contains("dismiss")) {
             setClickedImg(null);
         }
     }

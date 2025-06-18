@@ -14,7 +14,8 @@ const AccountModal: React.FC<AccountModalProps> = ({clickedAccountData, setClick
         new Promise(resolve => setTimeout(resolve, ms));
 
     const accountClick = (e: React.MouseEvent<HTMLDivElement>) => {
-        if (e.target.classList.contains("dismiss")) {
+        const target = e.target as HTMLElement;
+        if (target.classList.contains("dismiss")) {
             setClickedAccountData(null);
             setCopiedAccount(null);
         }
