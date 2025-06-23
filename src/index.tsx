@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
@@ -7,15 +7,14 @@ import { LanguageProvider } from './i18n';
 import reportWebVitals from './reportWebVitals';
 import { sendToVercelAnalytics } from './vitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <LanguageProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </LanguageProvider>
-  </React.StrictMode>,
-  document.getElementById('root')
+const rootElement = document.getElementById('root') as HTMLElement;
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <LanguageProvider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </LanguageProvider>
 );
 
 reportWebVitals(sendToVercelAnalytics);
