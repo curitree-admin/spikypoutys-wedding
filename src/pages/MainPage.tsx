@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import data from '../assets/image_data.json';
+import data from '../assets/image_data';
 import pinIcon from '../assets/location-pin.png';
 import mainImage from '../assets/main-image.jpeg';
 import brideAccountData from '../assets/bride_account_number_data.json';
