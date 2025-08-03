@@ -67,6 +67,7 @@ const Bride: React.FC = () => {
                   최연준 <span className='text2-inner'> & </span> 고은경
                 </div>
                 <div className='mainsection-text-3' dangerouslySetInnerHTML={{ __html: t('dateLocation') }} />
+                <div className='mainsection-text-3' dangerouslySetInnerHTML={{ __html: t('locationName') }} />
               </div>
             </div>
             <div className='invitation-section'>

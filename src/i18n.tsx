@@ -31,7 +31,7 @@ const translations: Record<Language, Record<string, string>> = {
     groomParents: '최진태・한미현의 차남 최연준',
     brideParents: '고형균・박명선의 장녀 고은경',
     dateLocation: '2025. 11. 09 일요일 오전 11시 30분',
-    locationName: '수원 노보텔',
+    locationName: '수원 노보텔 2층 샴페인 홀',
     locationAddress: '경기 수원시 팔달구 덕영대로 90<br/>2층 샴페인 홀<br/>Tel. 031-547-6600',
     byCar: '자가용',
     carText: '호텔 정면 주차장 입구2 혹은 후면 주차장입구1 통해 입차 하실수 있습니다.<br/>GATE 7번으로 진입하시면 조금 더 수월한 주차가 가능합니다.',
