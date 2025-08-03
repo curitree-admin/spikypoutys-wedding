@@ -5,7 +5,6 @@ import mainImage from '../assets/main-image.jpeg';
 import brideAccountData from '../assets/bride_account_number_data.json';
 import groomAccountData from '../assets/groom_account_number_data.json';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container as MapDiv, NaverMap, Marker, useNavermaps} from 'react-naver-maps';
 import '../App.css';
 import AccountModal from '../components/accountModal';
 import { useTranslation } from '../i18n';
@@ -19,8 +18,6 @@ const Bride: React.FC = () => {
   const [ copiedAccount, setCopiedAccount ] = useState<string | null>(null);
   console.log('clickedAccountData', clickedAccountData);
   const t = useTranslation();
-
-  const navermaps = useNavermaps()
 
     const accountClick = (account_data: { data: any }) => {
       setClickedAccountData(account_data.data);
@@ -77,29 +74,10 @@ const Bride: React.FC = () => {
             </Swiper>
             <div className='location-section'>
               <div className='location-section-text1'>
-                LOCATION
+                장소
               </div>
             </div>
             <div className='location-map-section'>
-              <MapDiv
-                style={{
-                  width: '100%',
-                  height: '350px'
-                }}
-              >
-                <NaverMap 
-                  defaultCenter={new navermaps.LatLng(37.44865592343993,126.95097244672262)}
-                  defaultZoom={16}>
-                  <Marker 
-                  position={new navermaps.LatLng(37.44865592343993,126.95097244672262)} 
-                  icon={
-                    {
-                      url : pinIcon,
-                      size : new navermaps.Size(64,64)
-                    }
-                  }/>
-                </NaverMap>
-              </MapDiv>
             </div>
             <div className='location-info-section'>
                 <div className='location-info-section-text1'>{t('locationName')}</div>
