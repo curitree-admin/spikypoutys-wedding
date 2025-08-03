@@ -83,18 +83,20 @@ const Bride: React.FC = () => {
                 <div className='location-info-section-text1'>{t('locationName')}</div>
                 <div className='location-info-section-text2' dangerouslySetInnerHTML={{ __html: t('locationAddress') }} />
             </div>
-            <div className='location-how-publictrans-section'>
-              <div className='location-how-publictrans-section-text1'>{t('publicTransport')}</div>
-              <ol className='location-how-publictrans-section-list'>
-                <li>{t('transport1')}</li>
-                <li>{t('transport2')}</li>
-                <li>{t('transport3')}</li>
-              </ol>
-            </div>
             <div className='location-how2-section'>
               <div className='location-how2-section-text1'>{t('byCar')}</div>
+              <div className='location-how2-section-text2' dangerouslySetInnerHTML={{ __html: t('carText') }}></div>
+            </div>
+            <div className='location-how2-section'>
+              <div className='location-how2-section-text1'>{t('byBus')}</div>
               <div className='location-how2-section-text2'>
-                {t('carText')}
+                {t('busText')}
+              </div>
+            </div>
+            <div className='location-how2-section'>
+              <div className='location-how2-section-text1'>{t('byTrain')}</div>
+              <div className='location-how2-section-text2'>
+                {t('trainText')}
               </div>
             </div>
             <div className='congratulatory-section'>
