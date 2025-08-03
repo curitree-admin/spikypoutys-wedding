@@ -27,7 +27,7 @@ const Bride: React.FC = () => {
     const longitude = 126.9991161;
     const mapOptions = {
       center: new naver.maps.LatLng(latitude, longitude),
-      zoom: 15,
+      zoom: 18,
     };
 
     const map = new naver.maps.Map('map', mapOptions);
