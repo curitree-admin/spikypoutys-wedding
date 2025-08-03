@@ -67,6 +67,7 @@ const Bride: React.FC = () => {
               modules={[Autoplay]}
               autoplay={{ delay: 2000 }}
               loop
+              className="gallery-swiper"
             >
               {data.data.map((item, index) => (
                 <SwiperSlide key={index}>
