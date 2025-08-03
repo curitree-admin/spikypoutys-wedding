@@ -27,7 +27,7 @@ export const useLanguage = () => useContext(LanguageContext);
 const translations: Record<Language, Record<string, string>> = {
   ko: {
     invitationHeading: '결혼식에 초대합니다',
-    invitationIntro: '수많은 물음표로 가득했던 삶에서 서로에게 확실한 느낌표가 되어주었습니다. 저희의 새로운 시작에소중한 분들을 모시고자 합니다.',
+    invitationIntro: '수많은 물음표로 가득했던 삶에서</br>서로에게 확실한 느낌표가 되어주었습니다.<br/>저희의 새로운 시작에<br/>소중한 분들을 모시고자 합니다.',
     groomParents: '최진태・한미현의 차남 최연준',
     brideParents: '고형균・박명선의 장녀 고은경',
     dateLocation: '2025. 11. 09 일요일 오전 11시 30분',

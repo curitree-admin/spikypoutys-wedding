@@ -9,7 +9,7 @@ import '../App.css';
 import AccountModal from '../components/accountModal';
 import { useTranslation } from '../i18n';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 
 const Bride: React.FC = () => {
@@ -70,10 +70,7 @@ const Bride: React.FC = () => {
               </div>
             </div>
             <div className='invitation-section'>
-              <div className='invitation-section-text1'>INVITATION</div>
-              <div className='invitation-section-text2'>
-                {t('invitationIntro')}
-              </div>
+              <div className='invitation-section-text2' dangerouslySetInnerHTML={{ __html: t('invitationIntro') }} />
               <div className='invitation-section-text3'>
                 {t('groomParents')}
               </div>
@@ -87,8 +84,11 @@ const Bride: React.FC = () => {
               </div>
             </div>
             <Swiper
-              modules={[Autoplay]}
+              modules={[Navigation, Pagination, Autoplay]}
               autoplay={{ delay: 2000 }}
+              navigation
+              pagination={{ clickable: true }}
+              scrollbar={{ draggable: true }}
               loop
               className="gallery-swiper"
             >
