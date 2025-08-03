@@ -67,7 +67,7 @@ const Bride: React.FC = () => {
                   최연준 <span className='text2-inner'> & </span> 고은경
                 </div>
                 <div className='mainsection-text-3' dangerouslySetInnerHTML={{ __html: t('dateLocation') }} />
-                <div className='mainsection-text-3' dangerouslySetInnerHTML={{ __html: t('locationName') }} />
+                <div className='mainsection-text-3' dangerouslySetInnerHTML={{ __html: t('locationNameFull') }} />
               </div>
             </div>
             <div className='invitation-section'>
@@ -109,7 +109,9 @@ const Bride: React.FC = () => {
             <div id='map' className='location-map-section'>
             </div>
             <div className='location-info-section'>
+              <a href="https://naver.me/GdycdD68" target="_blank" rel="noopener noreferrer">
                 <div className='location-info-section-text1'>{t('locationName')}</div>
+              </a>
                 <div className='location-info-section-text2' dangerouslySetInnerHTML={{ __html: t('locationAddress') }} />
             </div>
             <div className='location-how2-section'>
