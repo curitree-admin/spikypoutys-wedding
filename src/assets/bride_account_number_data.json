@@ -1,17 +1,16 @@
 {
     "data" : [
         {
+            "title" : "혼주 계좌",
+            "bank_name" : "국민은행",
+            "account_owner" : "고형근",
+            "account_number" : "497801-01-090481"
+        },
+        {
             "title" : "신부 계좌",
             "bank_name" : "신한은행",
             "account_owner" : "고은경",
             "account_number" : "110-472-228510"
-        },
-        {
-            "title" : "혼주 계좌",
-            "bank_name" : "국민은행",
-            "account_owner" : "고형근",
-            "account_number" : "110-222-333333"
         }
-
     ]
 }

@@ -17,7 +17,7 @@ const Bride: React.FC = () => {
   // state for account modal
   const [ clickedAccountData, setClickedAccountData ] = useState<any>(null);
   const [ copiedAccount, setCopiedAccount ] = useState<string | null>(null);
-
+  console.log('clickedAccountData', clickedAccountData);
   const t = useTranslation();
 
   const navermaps = useNavermaps()

@@ -12,7 +12,7 @@ interface AccountModalProps {
 const AccountModal: React.FC<AccountModalProps> = ({clickedAccountData, setClickedAccountData, copiedAccount, setCopiedAccount}) => {
 
     const t = useTranslation();
-
+    
     const delay = (ms: number) =>
         new Promise(resolve => setTimeout(resolve, ms));
 
@@ -23,7 +23,7 @@ const AccountModal: React.FC<AccountModalProps> = ({clickedAccountData, setClick
             setCopiedAccount(null);
         }
     };
-
+    console.log('AccountModal clickedAccountData', clickedAccountData);
     const copyAccountNumber = async (account_number: string) => {
         // navigator.clipboard.writeText(account_number);
         setCopiedAccount(account_number);

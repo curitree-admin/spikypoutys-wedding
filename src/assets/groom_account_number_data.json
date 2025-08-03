@@ -1,15 +1,16 @@
 {
     "data" : [
+
+        {
+            "title" : "혼주 계좌",
+            "bank_name" : "하나은행",
+            "account_owner" : "최진태",
+            "account_number" : "159-910938-32207"
+        },
         {
             "title" : "신랑 계좌",
             "bank_name" : "신한은행",
             "account_owner" : "최연준",
-            "account_number" : "110-511-111577"
-        },
-        {
-            "title" : "혼주 계좌",
-            "bank_name" : "신한은행",
-            "account_owner" : "최진태",
             "account_number" : "110-511-111577"
         }
     ]
