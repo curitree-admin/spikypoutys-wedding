@@ -7,14 +7,13 @@ import groomAccountData from '../assets/groom_account_number_data.json';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container as MapDiv, NaverMap, Marker, useNavermaps} from 'react-naver-maps';
 import '../App.css';
-import ImageModal from '../components/imageModal';
 import AccountModal from '../components/accountModal';
 import { useTranslation } from '../i18n';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import 'swiper/css';
 
 const Bride: React.FC = () => {
-  // state for image modal
-  const [clickedImg, setClickedImg] = useState<string | null>(null);
-  const [currentIndex, setCurrentIndex] = useState<number | null>(null);
   // state for account modal
   const [ clickedAccountData, setClickedAccountData ] = useState<any>(null);
   const [ copiedAccount, setCopiedAccount ] = useState<string | null>(null);
@@ -23,49 +22,11 @@ const Bride: React.FC = () => {
 
   const navermaps = useNavermaps()
 
-  const handleClick = (item: { link: string }, index: number) => {
-    setCurrentIndex(index);
-    setClickedImg(item.link);
-  };
-  const accountClick = (account_data: { data: any }) => {
-    setClickedAccountData(account_data.data);
-  };
+    const accountClick = (account_data: { data: any }) => {
+      setClickedAccountData(account_data.data);
+    };
 
-  const handleRotationRight = () => {
-    const totalLength = data.data.length;
-    if (currentIndex + 1 >= totalLength) {
-      setCurrentIndex(0);
-      const newUrl = data.data[0].link;
-      setClickedImg(newUrl);
-      return;
-    }
-    const newIndex = currentIndex + 1;
-    const newUrl = data.data.filter((item) => {
-      return data.data.indexOf(item) === newIndex;
-      });
-    const newItem = newUrl[0].link;
-    setClickedImg(newItem);
-    setCurrentIndex(newIndex);
-  };
-  
-  const handleRotationLeft = () => {
-    const totalLength = data.data.length;
-    if (currentIndex === 0) {
-      setCurrentIndex(totalLength - 1);
-      const newUrl = data.data[totalLength-1].link;
-      setClickedImg(newUrl);
-      return;
-    }
-    const newIndex = currentIndex - 1;
-    const newUrl = data.data.filter((item) => {
-      return data.data.indexOf(item) === newIndex;
-      });
-    const newItem = newUrl[0].link;
-    setClickedImg(newItem);
-    setCurrentIndex(newIndex);
-  };
-
-  return (
+    return (
     <div className="">
       <div className='main container'>
         <div className="row justify-content-md-center">
@@ -102,21 +63,17 @@ const Bride: React.FC = () => {
                 GALLERY
               </div>
             </div>
-            <div>
-              <div className='gallery-image-list-wrapper row'>
-                  {data.data.map((item, index) => (
-                    <div key={index} className='col-4'>
-                      <img className='gallery-image' src={item.thumb_image_link} alt={item.text} onClick={()=> handleClick(item, index)}/>
-                    </div>
-                  ))}
-              </div>
-              {clickedImg && <ImageModal 
-              clickedImg={clickedImg}
-              handleRotationRight={handleRotationRight}
-              handleRotationLeft={handleRotationLeft}
-              setClickedImg={setClickedImg}
-              />}
-            </div>
+            <Swiper
+              modules={[Autoplay]}
+              autoplay={{ delay: 2000 }}
+              loop
+            >
+              {data.data.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <img className='gallery-image' src={item.main_image_link} alt={item.text} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
             <div className='location-section'>
               <div className='location-section-text1'>
                 LOCATION
