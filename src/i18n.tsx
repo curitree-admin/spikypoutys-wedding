@@ -27,12 +27,12 @@ export const useLanguage = () => useContext(LanguageContext);
 const translations: Record<Language, Record<string, string>> = {
   ko: {
     invitationHeading: '결혼식에 초대합니다',
-    invitationIntro: '저희 두 사람이 사랑과 믿음으로 한 가정을 이루게 되었습니다. 바쁘시더라도 부디 오셔서 저희의 앞날을 축복해 주시고 격려해 주시면 감사하겠습니다.',
+    invitationIntro: '수많은 물음표로 가득했던 삶에서 서로에게 확실한 느낌표가 되어주었습니다. 저희의 새로운 시작에소중한 분들을 모시고자 합니다.',
     groomParents: '최진태・한미현의 차남 최연준',
-    brideParents: '고형균・박명선의 차녀 고은경',
-    dateLocation: '2025. 11. 09 일요일 오전 11시<br/>수원 노보텔',
+    brideParents: '고형균・박명선의 장녀 고은경',
+    dateLocation: '2025. 11. 09 일요일 오전 11시 30분',
     locationName: '수원 노보텔',
-    locationAddress: '경기 수원시 팔달구 덕영대로 90<br/>2층 메인 홀<br/>Tel. 031-547-6600',
+    locationAddress: '경기 수원시 팔달구 덕영대로 90<br/>2층 샴페인 홀<br/>Tel. 031-547-6600',
     publicTransport: '대중교통',
     transport1: '2호선 서울대입구역 3번 출구 → 5511,5513 버스 → 제2공학관(종점) 하차',
     transport2: '2호선 낙성대역 4번 출구 → 관악02 마을버스 → 제2공학관(종점) 하차',
