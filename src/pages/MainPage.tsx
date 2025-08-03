@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import data from '../assets/image_data';
 import pinIcon from '../assets/location-pin.png';
 import mainImage from '../assets/main-image.jpeg';
@@ -18,6 +18,32 @@ const Bride: React.FC = () => {
   const [ copiedAccount, setCopiedAccount ] = useState<string | null>(null);
   console.log('clickedAccountData', clickedAccountData);
   const t = useTranslation();
+
+  useEffect(() => {
+    const { naver } = window as any;
+    if (!naver) return;
+
+    const latitude = 37.268392;
+    const longitude = 126.9991161;
+    const mapOptions = {
+      center: new naver.maps.LatLng(latitude, longitude),
+      zoom: 15,
+    };
+
+    const map = new naver.maps.Map('map', mapOptions);
+
+    new naver.maps.Marker({
+      position: new naver.maps.LatLng(latitude, longitude),
+      map,
+      icon: {
+        url: pinIcon,
+        size: new naver.maps.Size(30, 30),
+        scaledSize: new naver.maps.Size(30, 30),
+        origin: new naver.maps.Point(0, 0),
+        anchor: new naver.maps.Point(15, 30),
+      },
+    });
+  }, []);
 
     const accountClick = (account_data: { data: any }) => {
       setClickedAccountData(account_data.data);
@@ -77,7 +103,7 @@ const Bride: React.FC = () => {
                 장소
               </div>
             </div>
-            <div className='location-map-section'>
+            <div id='map' className='location-map-section'>
             </div>
             <div className='location-info-section'>
                 <div className='location-info-section-text1'>{t('locationName')}</div>
