@@ -79,6 +79,7 @@
   padding-left: 0px;
   padding-right: 0px;
 }
+
 .gallery-image {
   width: 100%;
   height: auto;
@@ -549,18 +550,30 @@
     padding-left: 12px;
     padding-right: 12px;
   }
-  .gallery-image {
-    max-height: 300px;
-    object-fit: cover;
-  }
-  .congratulatory-section-btn {
-    width: 90%;
-  }
-  .account-popup,
-  .account-info-each,
-  .each-line,
-  .copy-success,
-  .account-popup-close {
-    width: 100%;
-  }
+
+.gallery-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.gallery-image {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+.congratulatory-section-btn {
+  width: 90%;
+}
+.account-popup,
+.account-info-each,
+.each-line,
+.copy-success,
+.account-popup-close {
+  width: 100%;
+}
 }

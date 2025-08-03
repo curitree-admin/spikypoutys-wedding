@@ -94,7 +94,9 @@ const Bride: React.FC = () => {
             >
               {data.data.map((item, index) => (
                 <SwiperSlide key={index}>
-                  <img className='gallery-image' src={item.main_image_link} alt={item.text} />
+                  <div className="gallery-image-container">
+                    <img className="gallery-image"  src={item.main_image_link} alt={item.text}/>
+                  </div>
                 </SwiperSlide>
               ))}
             </Swiper>
