@@ -53,8 +53,8 @@ const translations: Record<Language, Record<string, string>> = {
   en: {
     invitationHeading: "You're Invited to Our Wedding",
     invitationIntro: 'We are joining together in love and faith. We would be honored if you come celebrate and bless our future.',
-    groomParents: "Choi Jin Tae & Han Mi Hyun's son Yeon Jun",
-    brideParents: "Ko Hyeong Gyun & Park Myung Sun's daughter Eun Kyung",
+    groomParents: "Choi Jintae & Han Mihyun's son Yeonjoon",
+    brideParents: "Ko Hyeonggyun & Park Myungsun's daughter Eunkyung",
     dateLocation: 'Nov 9, 2025 (Sun) 11:00 AM<br/>Suwon Novotel',
     locationName: 'Suwon Novotel',
     locationAddress: '90 Deogyeong-daero, Paldal-gu, Suwon-si<br/>2F Main Hall<br/>Tel. 031-547-6600',

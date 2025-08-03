@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import data from '../assets/image_data.json';
 import pinIcon from '../assets/location-pin.png';
-import mainImage from '../assets/main-image.jpg';
+import mainImage from '../assets/main-image.jpeg';
 import brideAccountData from '../assets/bride_account_number_data.json';
 import groomAccountData from '../assets/groom_account_number_data.json';
 import 'bootstrap/dist/css/bootstrap.min.css';
