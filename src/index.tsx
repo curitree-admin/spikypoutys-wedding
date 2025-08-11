@@ -6,8 +6,8 @@ import { BrowserRouter } from 'react-router-dom';
 import { LanguageProvider } from './i18n';
 import reportWebVitals from './reportWebVitals';
 import { sendToVercelAnalytics } from './vitals';
-
 const rootElement = document.getElementById('root') as HTMLElement;
+
 const root = ReactDOM.createRoot(rootElement);
 root.render(
   <LanguageProvider>
