@@ -4,8 +4,8 @@ import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { LanguageProvider } from './i18n';
-import reportWebVitals from './reportWebVitals';
-import { sendToVercelAnalytics } from './vitals';
+import { Analytics } from '@vercel/analytics/react';
+
 const rootElement = document.getElementById('root') as HTMLElement;
 
 const root = ReactDOM.createRoot(rootElement);
@@ -13,8 +13,7 @@ root.render(
   <LanguageProvider>
     <BrowserRouter>
       <App />
+      <Analytics />
     </BrowserRouter>
   </LanguageProvider>
 );
-
-reportWebVitals(sendToVercelAnalytics);
