@@ -7,6 +7,7 @@ import img006 from './006.jpeg';
 import img007 from './007.jpeg';
 import img008 from './008.jpeg';
 import img009 from './009.jpeg';
+import img010 from './009.jpeg';
 
 const data = {
   data: [
@@ -19,6 +20,7 @@ const data = {
     { text: '7', main_image_link: img007, thumb_image_link: img007, link: img007 },
     { text: '8', main_image_link: img008, thumb_image_link: img008, link: img008 },
     { text: '9', main_image_link: img009, thumb_image_link: img009, link: img009 },
+    { text: '10', main_image_link: img010, thumb_image_link: img010, link: img010 },
   ],
 };
 
