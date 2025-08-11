@@ -1,6 +1,6 @@
 import data from './assets/image_data';
 
-test('image data contains nine entries', () => {
-  expect(data.data).toHaveLength(9);
+test('image data contains ten entries', () => {
+  expect(data.data).toHaveLength(10);
 });
 

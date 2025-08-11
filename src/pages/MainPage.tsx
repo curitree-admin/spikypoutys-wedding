@@ -79,6 +79,17 @@ const Bride: React.FC = () => {
                 {t('brideParents')}
               </div>
             </div>
+            <div className='rsvp-section'>
+              <button
+                className='congratulatory-section-btn'
+                data-tally-open="wojjW5"
+                data-tally-layout="modal"
+                data-tally-emoji-text="👋"
+                data-tally-emoji-animation="wave"
+              >
+                {t('rsvp')}
+              </button>
+            </div>
             <div className='gallery-section'>
               <div className='gallery-section-text'>
                 GALLERY
