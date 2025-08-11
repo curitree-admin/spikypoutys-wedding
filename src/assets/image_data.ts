@@ -7,7 +7,7 @@ import img006 from './006.jpeg';
 import img007 from './007.jpeg';
 import img008 from './008.jpeg';
 import img009 from './009.jpeg';
-import img010 from './009.jpeg';
+import img010 from './010.jpeg';
 
 const data = {
   data: [
